@@ -62,6 +62,35 @@ HTMLActuator.prototype.addTile = function (tile) {
   // We can't use classlist because it somehow glitches when replacing classes
   var classes = ["tile", "tile-" + tile.value, positionClass];
 
+  var tiles = new Array ();
+  tiles[2]			= "Ada";
+  tiles[4]			= "Bash";
+  tiles[8]			= "C";
+  tiles[16]			= "Delphi";
+  tiles[32]			= "Erlang";
+  tiles[64]			= "Fortran";
+  tiles[128]		= "Go";
+  tiles[256]		= "Haskell";
+  tiles[512]		= "Icon";
+  tiles[1024]		= "Javascript"
+  tiles[2048]     	= "ksh";
+  tiles[4096]     	= "LaTeX";
+  tiles[8192]     	= "Modula";
+  tiles[16384]    	= "NASM";
+  tiles[32768]    	= "Objective-C";
+  tiles[65536]    	= "Python";
+  tiles[131072]   	= "QPL";
+  tiles[262144]  	= "Ruby";
+  tiles[524288]  	= "Smalltalk";
+  tiles[1048576]  	= "TeX";
+  tiles[2097152]	= "Unix shell";
+  tiles[4194304]	= "VBA";
+  tiles[8388608]	= "WebGL";
+  tiles[16777216]	= "XSLT";
+  tiles[33554432]	= "Yorick";
+  tiles[67108864]	= "Zeno";
+
+
   if (tile.value > 2048) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
