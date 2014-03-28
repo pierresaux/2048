@@ -464,7 +464,7 @@ hr {
       }
 
       // Adjust font size for bigger numbers
-	  @if $power == 16 or
+	  @else if $power == 16 or
 	  $power == 32 or
 	  $power == 64 or
 	  $power == 256
