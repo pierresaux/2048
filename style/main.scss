@@ -90,7 +90,7 @@ input {
 }
 
 h1.title {
-  font-size: 80px;
+  font-size: 56px;
   font-weight: bold;
   margin: 0;
   display: block;
@@ -404,7 +404,7 @@ hr {
     font-weight: bold;
     z-index: 10;
 
-    font-size: 55px;
+    font-size: 40px;
   }
 
   // Movement transition
@@ -464,18 +464,29 @@ hr {
       }
 
       // Adjust font size for bigger numbers
-      @if $power >= 100 and $power < 1000 {
-        font-size: 45px;
+	  @if $power == 16 or
+	  $power == 32 or
+	  $power == 64 or
+	  $power == 256
+	  $power == 8192 or
+	  $power == 65536 or
+	  $power == 33554432
+	  {
+        font-size: 28px;
 
         // Media queries placed here to avoid carrying over the rest of the logic
         @include smaller($mobile-threshold) {
-          font-size: 25px;
+          font-size: 16px;
         }
-      } @else if $power >= 1000 {
-        font-size: 35px;
+      } @else if $power == 1024 or
+	  $power == 32768 or
+	  $power == 524288 or
+	  $power == 2097152
+	  {
+        font-size: 18px;
 
         @include smaller($mobile-threshold) {
-          font-size: 15px;
+          font-size: 10px;
         }
       }
     }
@@ -488,10 +499,10 @@ hr {
     color: $bright-text-color;
     background: mix(#333, $tile-gold-color, 95%);
 
-    font-size: 30px;
+    //font-size: 30px;
 
     @include smaller($mobile-threshold) {
-      font-size: 10px;
+      //font-size: 10px;
     }
   }
 }
@@ -574,7 +585,7 @@ hr {
   $game-container-margin-top: 17px;
 
   html, body {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   body {
@@ -583,7 +594,7 @@ hr {
   }
 
   h1.title {
-    font-size: 27px;
+    font-size: 24px;
     margin-top: 15px;
   }
 
@@ -623,7 +634,7 @@ hr {
 
   // Rest of the font-size adjustments in the tile class
   .tile .tile-inner {
-    font-size: 35px;
+    font-size: 42px;
   }
 
   .game-message {
